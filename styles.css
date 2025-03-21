@@ -4,8 +4,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: 100vh; /* Ensure it fits iPhone 11 resolution */
+    max-width: 414px; /* iPhone 11 width */
+    margin: 0 auto; /* Center content horizontally */
 }
 
 .id-card {
@@ -50,14 +51,15 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: black;
-    background-color: #f0f0f0;
+    background-color: #dbd9ff; /* Celeste pastel */
     padding: 5px 10px;
     border-radius: 5px;
+    font-stretch: expanded; /* Slightly elongated font */
 }
 
 .date {
     font-size: 14px;
-    color: #b0b0b0;
+    color: #bbbfcb;
     margin-top: 5px;
 }
 
@@ -100,6 +102,30 @@ body {
     animation: moveCloud 10s linear infinite;
 }
 
+.cloud-2 {
+    top: 20%;
+    left: -250px;
+    width: 120px;
+    opacity: 0.7;
+    animation: moveCloud2 12s linear infinite;
+}
+
+.cloud-3 {
+    top: 70%;
+    left: -300px;
+    width: 180px;
+    opacity: 0.9;
+    animation: moveCloud3 15s linear infinite;
+}
+
+.cloud-4 {
+    top: 35%;
+    left: -220px;
+    width: 140px;
+    opacity: 0.85;
+    animation: moveCloud4 18s linear infinite;
+}
+
 @keyframes moveCloud {
     from {
         transform: translateX(0);
@@ -109,30 +135,50 @@ body {
     }
 }
 
+@keyframes moveCloud2 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(110%);
+    }
+}
+
+@keyframes moveCloud3 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(110%);
+    }
+}
+
+@keyframes moveCloud4 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(110%);
+    }
+}
+
 .fullscreen-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    background-color: transparent;
+    color: #d32f2f; /* Match TIU Virtual color */
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 24px;
     z-index: 1000;
+}
+
+.fullscreen-btn:hover {
+    color: #b71c1c; /* Darker red on hover */
 }
 
 .github-link {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    color: #007bff;
-    text-decoration: none;
-    font-size: 16px;
-    z-index: 1000;
-}
-
-.github-link:hover {
-    text-decoration: underline;
+    display: none;
 }

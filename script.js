@@ -22,3 +22,25 @@ document.getElementById('fullscreen-btn').addEventListener('click', () => {
         document.documentElement.msRequestFullscreen();
     }
 });
+
+function createClouds() {
+    const background = document.querySelector('.background');
+
+    const cloud1 = document.createElement('div');
+    cloud1.className = 'cloud';
+    background.appendChild(cloud1);
+
+    const cloud2 = document.createElement('div');
+    cloud2.className = 'cloud-2';
+    background.appendChild(cloud2);
+
+    const cloud3 = document.createElement('div');
+    cloud3.className = 'cloud-3';
+    background.appendChild(cloud3);
+
+    const cloud4 = document.createElement('div');
+    cloud4.className = 'cloud-4';
+    background.appendChild(cloud4);
+}
+
+createClouds();
