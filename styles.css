@@ -163,22 +163,19 @@ body {
 }
 
 .fullscreen-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 5px;
-    background-color: transparent;
-    color: #d32f2f; /* Match TIU Virtual color */
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 1000;
-}
-
-.fullscreen-btn:hover {
-    color: #b71c1c; /* Darker red on hover */
+    display: none; /* Remove fullscreen button */
 }
 
 .github-link {
-    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+.github-link:hover {
+    text-decoration: underline;
 }

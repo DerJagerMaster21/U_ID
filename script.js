@@ -13,16 +13,6 @@ function updateTimeAndDate() {
 setInterval(updateTimeAndDate, 1000);
 updateTimeAndDate();
 
-document.getElementById('fullscreen-btn').addEventListener('click', () => {
-    if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-    } else if (document.documentElement.webkitRequestFullscreen) { // Safari
-        document.documentElement.webkitRequestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) { // IE11
-        document.documentElement.msRequestFullscreen();
-    }
-});
-
 function createClouds() {
     const background = document.querySelector('.background');
 
