@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.image-container {
+    position: relative;
+    max-width: 100%;
+}
+
+#main-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.clock-box {
+    position: absolute;
+    /* Posición exacta según coordenadas proporcionadas */
+    top: 214px;
+    left: 224px;
+    width: 150px;
+    height: 40px;
+    background-color: #dbd9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#clock {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
