@@ -6,22 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const seconds = String(now.getSeconds()).padStart(2, '0');
         document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
     }
-
-    function updateDate() {
-        const now = new Date();
-        const dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-        const meses = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
-        const diaSemana = dias[now.getDay()];
-        const dia = String(now.getDate()).padStart(2, '0');
-        const mes = meses[now.getMonth()];
-        const anio = now.getFullYear();
-        document.getElementById('fecha').textContent = `${diaSemana}, ${dia} ${mes} ${anio}`;
-    }
-
     updateClock();
-    updateDate();
-    setInterval(function() {
-        updateClock();
-        updateDate();
-    }, 1000);
+    setInterval(updateClock, 1000);
 });

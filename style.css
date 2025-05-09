@@ -51,11 +51,12 @@ body {
 }
 
 #clock {
-    font-size: 40px;
+    font-size: 44px;
     font-weight: 600;
     color: #222;
     letter-spacing: 2px;
-    margin-bottom: 4px;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 #fecha {
